@@ -37,7 +37,7 @@ Un nombre magique aura donc tendance à <b>rendre votre code plus cryptique et m
 
 Pour mitiger cette problématique nous allons chercher à <b>encapsuler et expliciter</b> ce nombre magique.
 
-Si ce nombre est statique qu'importe le contexte d'utilisation alors l’écriture d'une [class de constantes](https://www.php.net/manual/fr/language.oop5.constants.php) peut s’avérer judicieux pour l'encapsuler.
+Si ce nombre est statique qu'importe le contexte d'utilisation alors l’écriture d'une [class de constantes](https://www.php.net/manual/fr/language.oop5.constants.php) peut s’avérer judicieux.
 
 Par la même occasion <b>ce nombre est désormais nommé</b>, rendant notre situation bien plus explicite.
 
