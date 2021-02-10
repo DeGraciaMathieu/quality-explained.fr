@@ -32,7 +32,7 @@ theme: tale
 plugins:
   - jekyll-feed
 
-permalink:  /:title
+permalink:  /:title/
 paginate:   10
 
 # Exclude from processing.
