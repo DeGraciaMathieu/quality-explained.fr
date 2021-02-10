@@ -32,8 +32,8 @@ theme: tale
 plugins:
   - jekyll-feed
 
-permalink:  /:year-:month-:day/:title
-paginate:   5
+permalink:  /:title
+paginate:   10
 
 # Exclude from processing.
 # The following items will not be processed, by default.
