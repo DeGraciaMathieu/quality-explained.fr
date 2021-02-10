@@ -1,0 +1,68 @@
+---
+layout: post
+title:  "L'utilisation des flags"
+description:  "Un flag est un argument optionnel, le plus souvent boolean, influant le comportement d’une méthode."
+date:   2021-02-06 22:59:04 +0100
+categories: jekyll update
+---
+
+Un `flag` est un argument optionnel, le plus souvent `boolean`, influant sur le comportement d’une méthode.
+
+```php
+File::make($name);
+File::make($name, true);
+```
+
+À quoi correspond `true` ?
+
+Auriez-vous deviné qu’un second argument existait ?
+
+Vous rappelleriez-vous de son utilité dans quelques mois ?
+
+C’est pour ces quelques raisons que <b>l’utilisation d’un `flag` est dangereuse pour l’expressivité de votre code</b> et devrait être utilisé avec parcimonie.
+
+Un `flag` aura tendance à <b>camoufler un comportement interne</b> vous obligeant à vérifier la signature de votre méthode pour en saisir le sens, c’est une coupure cognitive que l’on doit éviter pour conserver une lecture fluide de notre code.
+
+```php
+public static function make(string $name, bool $temporary)
+{
+    if ($temporary) {
+        //
+    }
+
+    //
+}
+```
+
+Ajouter un `flag` à une méthode est également <b>dangereux pour sa maintenabilité</b>.
+
+De facto, un `flag` consiste à ajouter un comportement à votre méthode, prenant le risque de là faire grossir et d'augmenter ses responsabilités.
+
+Ainsi un indicateur comme le [lack of coherence](https://blog.ndepend.com/lack-of-cohesion-methods/) pourra identifier les méthodes "qui en font trop".
+
+<hr>
+
+<h1>How to fix</h1>
+
+Pour éliminer un `flag` il faut identifier les différents comportements de votre méthode pour les encapsuler, ainsi nous pourrons <b>refactoriser notre code en plusieurs méthodes</b>.
+
+```php
+File::make($name);
+File::makeTemporary($name);
+```
+
+Nous sommes désormais face à des méthodes plus courtes, plus facilement testables, ayant des noms explicites.
+
+Si cette refactorisation n'est pas envisageable il faut alors chercher à mitiger la problématique.
+
+Par exemple, il sera possible d'expliciter un `flag` en passant par une variable intermédiaire :
+
+```php
+File::make($name, $temporary = true);
+```
+
+`php8` offrant également la possibilité d'utiliser les [named arguments](https://stitcher.io/blog/php-8-named-arguments) :
+
+```php
+File::make($name, temporary: true);
+```
