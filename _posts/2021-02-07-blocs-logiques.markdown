@@ -21,13 +21,13 @@ return View::make('index', compact($barService));
 
 Ce code fonctionne mais ces quelques lignes forment un ensemble compact dont <b>les intentions sont laborieuses à identifier</b>.
 
-Il est pourtant facile de le clarifier en découpant ses statements en plusieurs sous-ensembles partageant un sens commun :
+Il est pourtant facile de le clarifier en découpant ces lignes en plusieurs sous-ensembles partageant un sens commun :
 
 - La création de class
 - L’appel des méthodes
-- L’assignation des variables
+- L’assignation des variables...
 
-En ajoutant une simple distinction visuelle, tel qu’un saut de ligne, nous pouvons cloisoner ce code en plusieurs paragraphes.
+En ajoutant une simple distinction visuelle, tel qu’un saut de ligne, nous pouvons <b>cloisoner ce code en plusieurs paragraphes</b>.
 
 ```php
 $fooService = new FooService();
@@ -41,4 +41,4 @@ Event::fire(new FiringManyThings());
 return View::make('index', compact($barService));
 ```
 
-Ainsi aéré ce code gagne en lisibilité, la lecture en diagonale est en facilité et on appréhende désormais rapidement les différentes intentions.
+Notre code gagne ainsi en lisibilité, la lecture en diagonale est en facilité et on appréhende désormais rapidement les différentes intentions.
