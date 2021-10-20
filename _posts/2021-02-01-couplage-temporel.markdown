@@ -11,7 +11,7 @@ le couplage temporel est un comportement contextuel d’une méthode qui n’est
 {% highlight php %}
 class Authenticate {
 
-    public function login(integer $id): User
+    public function login(int $id): User
     {
         $user = Auth::login($id);
 
@@ -22,9 +22,9 @@ class Authenticate {
 }
 {% endhighlight %}
 
-L’appel de cette méthode `refreshRigths` <b>n’est pas problématique en soit</b>, il faut cependant déterminer si sa présence au sein de notre méthode `authenticate` n’est pas contraignante.
+L’appel de cette méthode `refreshRigths` n’est pas problématique en soit, il faut cependant déterminer si sa présence au sein de notre méthode `login` n’est pas contraignante.
 
-<b>Voulons nous vraiment associer une authentification à un rafraichissement des droits</b>, ce comportement doit il être tacite ?
+Voulons nous vraiment associer une authentification à un rafraichissement des droits, <b>ce comportement doit il être tacite</b> ?
 
 Si ce n’est pas le cas alors cet appel de `refreshRigths` peut s’averer problématique et restreindre notre utilisation de la méthode `authenticate`.
 
