@@ -36,9 +36,11 @@ public static function make(string $name, bool $temporary)
 
 Ajouter un `flag` à une méthode est également <b>dangereux pour sa maintenabilité</b>.
 
-De facto, un `flag` consiste à ajouter un comportement à votre méthode, prenant le risque de là faire grossir et d'augmenter ses responsabilités.
+De facto, un `flag` consiste à ajouter un comportement supplémentaire à votre méthode, prenant le risque de là faire grossir et d'augmenter ses responsabilités.
 
-Ainsi un indicateur comme le [lack of coherence](https://blog.ndepend.com/lack-of-cohesion-methods/) pourra identifier les méthodes "qui en font trop".
+> Une fonction doit faire une seule chose, elle doit la faire et ne faire qu'elle.
+
+Un indicateur comme le [lack of coherence](https://blog.ndepend.com/lack-of-cohesion-methods/) pourra identifier les méthodes "qui en font trop".
 
 <hr>
 
@@ -51,7 +53,7 @@ File::make($name);
 File::makeTemporary($name);
 ```
 
-Nous sommes désormais face à des méthodes plus courtes, plus facilement testables, ayant des noms explicites.
+Nous sommes désormais face à des méthodes plus courtes, plus facilement testables, avec des noms explicites.
 
 Si cette refactorisation n'est pas envisageable il faut alors chercher à mitiger la problématique.
 
