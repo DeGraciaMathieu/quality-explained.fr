@@ -26,7 +26,7 @@ L’appel de cette méthode `refreshRigths` n’est pas problématique en soit, 
 
 Voulons nous vraiment associer une authentification à un rafraichissement des droits, <b>ce comportement doit il être tacite</b> ?
 
-Si ce n’est pas le cas alors cet appel de `refreshRigths` peut s’averer problématique et restreindre notre utilisation de la méthode `authenticate`.
+Si ce n’est pas le cas alors cet appel de `refreshRigths` peut s’averer problématique et restreindre notre utilisation de la méthode `login`.
 
 > Et si je veux uniquement effectuer un `Auth::login` sans refresh les droits ? 
 
