@@ -15,7 +15,9 @@ class UserService {
 
     public function getRefreshedRights(): Collection
     {
-        $rights = auth()->user()->rights;
+        $user = auth()->user();
+
+        $rights = $user->rights;
 
         $rights->refresh();
 
