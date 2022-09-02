@@ -8,7 +8,7 @@ categories: jekyll update
 
 On considère impure une fonction qui possède des effets de bord, dont toutes les dépendances ne sont pas déterministes mais caractérisées par l’état de l’application.
 
-La méthode `getRefreshedRights` suivante est impure car elle manipule une instance de `user` récupérée depuis le singleton `auth()`.
+La méthode `getRefreshedRights` suivante est impure car elle manipule une instance de `User` récupérée depuis le singleton `auth()`.
 
 {% highlight php %}
 class UserService {
