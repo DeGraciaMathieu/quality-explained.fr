@@ -25,7 +25,7 @@ Rien n’indique ici que la création d’une validation implique d’envoyer un
 
 La définition d’une méthode se doit d’être <b>claire sur ses intentions</b>, tout <b>comportement caché est une source d’incomprehensions</b> et de surprises que l’on doit éviter.
 
-Une grande distance sémantique est souvent <b>symptomatique d’un problème de conception</b> et revelateur d'une `class` possédant trop de préaucupations.
+Une grande distance sémantique est souvent <b>symptomatique d’un problème de conception</b> et revelateur d'une `class` possédant trop de préocupations.
 
 <hr>
 
@@ -50,6 +50,6 @@ function requestHttpTokenValidation(Validation $validation)
 }
 {% endhighlight %}
 
-Au contraire, si la réponse est non, nous sommes probablement face à un couplage temporel.
+Au contraire, si la réponse est non, nous sommes probablement face à un [couplage temporel](https://quality-explained.fr/couplage-temporel/).
 
 Il est conseillé de refactoriser en profondeur cette méthode pour en <b>extraire les différentes préoccupations</b>.
