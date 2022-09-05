@@ -6,7 +6,7 @@ date:   2022-09-02 15:59:04 +0100
 categories: jekyll update
 ---
 
-On considère impure une fonction qui possède des effets de bord, dont toutes les dépendances ne sont pas déterministes mais caractérisées par l’état de l’application.
+On considère impure une méthode qui possède des effets de bord, dont toutes les dépendances ne sont pas déterministes mais caractérisées par l’état de l’application.
 
 La méthode `getRefreshedRights` suivante est impure car elle manipule une instance de `User` récupérée depuis le singleton `auth()`.
 
@@ -30,7 +30,7 @@ Il est nécessaire qu’un utilisateur soit connecté pour que cette méthode fo
 
 **L’utilisation d’une méthode impure est toujours contraignant**, ses effets de bord la rendant faillible et étroitement liée à un contexte d’utilisation.
 
-Tester une méthode impure sera également laborieux car vous devez vous assurer que tous les effets de bord seront satisfaits en amont, principalement à l’aide de mocks.
+Tester une méthode impure sera également laborieux car vous devez vous assurer que tous les effets de bord seront satisfaits en amont, principalement à l’aide de mock.
 
 <hr>
 
