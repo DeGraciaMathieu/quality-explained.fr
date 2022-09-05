@@ -40,8 +40,6 @@ Une méthode pure n’est pas sujet aux effets de bord, toutes ses dépendances 
 
 Dans notre exemple, remplacer le singleton `auth` par un argument `$user` rendra notre méthode pure.
 
-Ainsi, notre méthode `getRefreshedRights` ne sera plus dépendante d'un état spécifique de l’application, plus facile à tester et gagnera en souplesse d'utilisation en repondant à de nouveaux usecases.
-
 {% highlight php %}
 class UserService {
 
@@ -55,3 +53,5 @@ class UserService {
     }
 }
 {% endhighlight %}
+
+Ainsi, notre méthode `getRefreshedRights` ne sera plus dépendante d'un état spécifique de l’application, plus facile à tester et gagnera en souplesse d'utilisation en repondant à de nouveaux usecases.
