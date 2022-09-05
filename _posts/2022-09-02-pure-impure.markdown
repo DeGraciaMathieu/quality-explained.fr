@@ -56,6 +56,6 @@ class UserService {
 }
 {% endhighlight %}
 
-Cette méthode pure gagne également en souplesse d'utilisation en répondant à de nouveaux usecases.
+Cette méthode pure gagne également en souplesse d'utilisation en répondant à de nouveaux cas d'utilisation.
 
 En effet, il n'est plus nécessaire qu'un utilisateur soit connecté pour la manier, nous pouvons désormais l'utiliser sur n'importe quelle instance de `User` !
