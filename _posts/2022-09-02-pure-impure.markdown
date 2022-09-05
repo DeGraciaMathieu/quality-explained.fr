@@ -38,9 +38,9 @@ Tester une méthode impure sera également laborieux car vous devez vous assurer
 
 Une méthode pure n’est pas sujet aux effets de bord, toutes ses dépendances sont déterministes.
 
-Dans notre example, remplacer le singleton `auth` par un argument `$user` rendra notre méthode pure.
+Dans notre exemple, remplacer le singleton `auth` par un argument `$user` rendra notre méthode pure.
 
-Ainsi, elle ne sera plus dépendante d'un état spécifique de l’application et plus facile à tester.
+Ainsi, notre méthode `getRefreshedRights` ne sera plus dépendante d'un état spécifique de l’application, plus facile à tester et gagnera en souplesse d'utilisation en repondant à de nouveaux usecases.
 
 {% highlight php %}
 class UserService {
@@ -55,5 +55,3 @@ class UserService {
     }
 }
 {% endhighlight %}
-
-Cette méthode pure gagne également en souplesse en répondant à de nouveaux cas d'utilisation, nous pouvons désormais l’utiliser sur n’importe quelle instance de `User` !
