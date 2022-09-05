@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "pure / impure"
-description:  "Une fonction impure possède des effets de bord, toutes ses dépendances ne sont pas déterministes mais caractérisées par l’état de l’application."
+description:  "Une méthode impure possède des effets de bord, toutes ses dépendances ne sont pas déterministes mais caractérisées par l’état de l’application."
 date:   2022-09-02 15:59:04 +0100
 categories: jekyll update
 ---
